@@ -13,7 +13,7 @@ class RegisterRequest(BaseModel):
 # PUBLIC_INTERFACE
 class AuthResponse(BaseModel):
     access_token: str = Field(..., description="JWT access token")
-    token_type: str = Field(..., default="bearer")
+    token_type: str = Field(default="bearer", description="JWT token type (bearer)")
 
 # PUBLIC_INTERFACE
 class PasswordResetRequest(BaseModel):
